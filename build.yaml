@@ -1,0 +1,47 @@
+builders:
+  view_model_generator:
+    import: 'package:gen/gen.dart'
+    builder_factories:
+      - stateGenerator
+    build_extensions:
+      .dart:
+        - state.g.part
+    auto_apply: dependents
+    build_to: cache
+    applies_builders:
+      - source_gen|combining_builder
+      - gen|temporary_file_cleanup
+
+  model_generator:
+    import: 'package:gen/gen.dart'
+    builder_factories:
+      - modelGenerator
+    build_extensions:
+      .dart:
+        - .model.part
+    auto_apply: dependents
+    build_to: cache
+    applies_builders:
+      - gen|modelMerger
+
+  model_merger:
+    import: 'package:gen/gen.dart'
+    builder_factories:
+      - modelMerger
+    build_extensions:
+      .dart:
+        - '*.dart'
+    auto_apply: dependents
+    build_to: source
+    required_inputs:
+      - .model.part
+    runs_before:
+      - json_serializable|json_serializable
+
+post_process_builders:
+  temporary_file_cleanup:
+    import: 'package:gen/gen.dart'
+    builder_factory: temporaryFileCleanup
+    defaults:
+      release_options:
+        enabled: true
