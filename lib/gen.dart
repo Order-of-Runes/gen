@@ -1,14 +1,14 @@
 // Copyright (c) 2025 Order of Runes Authors. All rights reserved.
 
-export 'annotations/doc.dart';
-export 'annotations/model.dart';
-export 'annotations/state.dart';
+export 'src/annotations/doc.dart';
+export 'src/annotations/model.dart';
+export 'src/annotations/state.dart';
 
 import 'package:build/build.dart';
 import 'package:dart_style/dart_style.dart';
-import 'package:gen/codegen/model/model_gen.dart';
-import 'package:gen/codegen/model/model_merger.dart';
-import 'package:gen/codegen/state/state_gen.dart';
+import 'package:gen/src/codegen/model/model_generator.dart';
+import 'package:gen/src/codegen/model/model_merger.dart';
+import 'package:gen/src/codegen/state/state_generator.dart';
 import 'package:pub_semver/pub_semver.dart';
 import 'package:source_gen/source_gen.dart';
 

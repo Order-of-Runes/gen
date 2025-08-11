@@ -4,7 +4,7 @@ import 'dart:convert';
 
 import 'package:analyzer/dart/element/element.dart';
 import 'package:build/build.dart';
-import 'package:gen/annotations/model.dart';
+import 'package:gen/src/annotations/model.dart';
 import 'package:source_gen/source_gen.dart';
 
 class ModelGenerator extends GeneratorForAnnotation<GenModel> {

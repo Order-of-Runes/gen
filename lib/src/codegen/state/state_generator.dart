@@ -4,9 +4,9 @@ import 'dart:convert';
 
 import 'package:analyzer/dart/element/element.dart';
 import 'package:build/build.dart';
-import 'package:gen/annotations/state.dart';
-import 'package:gen/codegen/state/base_field.dart';
-import 'package:gen/codegen/state/helper.dart';
+import 'package:gen/src/annotations/state.dart';
+import 'package:gen/src/codegen/state/base_field.dart';
+import 'package:gen/src/codegen/state/helper.dart';
 import 'package:source_gen/source_gen.dart';
 
 const _baseClassFields = [
