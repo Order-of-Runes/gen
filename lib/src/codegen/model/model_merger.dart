@@ -38,6 +38,8 @@ import 'package:corekit/corekit.dart';
       ..writeln(parts)
       ..writeln();
 
+    print(exports.length);
+
     // Generates actual `Model` classes along with `Fields` classes.
     for (final export in exports) {
       final model = (await buildStep.readAsString(export)).replaceAll(RegExp('(//.*\n)+\n'), '');
