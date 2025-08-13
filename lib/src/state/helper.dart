@@ -1,7 +1,7 @@
 // Copyright (c) 2025 Order of Runes Authors. All rights reserved.
 
 import 'package:analyzer/dart/element/element.dart';
-import 'package:gen/src/annotations/state.dart';
+import 'package:gen_annotation/gen_annotation.dart';
 import 'package:source_gen/source_gen.dart';
 
 extension DefaultAnnotationExtension on ElementAnnotation {
