@@ -19,7 +19,6 @@ import 'dart:convert';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:resources/resources.dart';
 import 'package:rusty_dart/rusty_dart.dart';
-import 'package:tms/core/base.dart';
 import 'package:corekit/corekit.dart';
   ''';
 
