@@ -2,8 +2,8 @@
 
 import 'package:build/build.dart';
 import 'package:dart_style/dart_style.dart';
+import 'package:gen/src/model/merger.dart';
 import 'package:gen/src/model/model_generator.dart';
-import 'package:gen/src/model/model_merger.dart';
 import 'package:gen/src/state/state_generator.dart';
 import 'package:pub_semver/pub_semver.dart';
 import 'package:source_gen/source_gen.dart';
@@ -35,7 +35,7 @@ Builder modelGenerator(BuilderOptions options) {
   );
 }
 
-Builder modelMerger(BuilderOptions options) => ModelMerger();
+Builder merger(BuilderOptions options) => Merger();
 
 // TODO (Ishwor) Part files are not removed
 PostProcessBuilder temporaryFileCleanup(BuilderOptions options) {

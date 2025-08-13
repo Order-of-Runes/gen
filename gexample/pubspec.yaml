@@ -19,6 +19,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   gen:
-    path: ../
+    git:
+      url: https://github.com/Order-of-Runes/gen.git
+      ref: main
   json_serializable: ^6.9.3
   flutter_lints: ^5.0.0

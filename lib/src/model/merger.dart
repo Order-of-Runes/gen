@@ -8,7 +8,7 @@ import 'package:gen/gen.dart';
 import 'package:glob/glob.dart';
 import 'package:pub_semver/pub_semver.dart';
 
-class ModelMerger extends Builder {
+class Merger extends Builder {
   ///Location where the code is generated
   final String genLocation = 'model/models.dart';
 

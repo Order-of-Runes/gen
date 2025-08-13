@@ -22,12 +22,12 @@ builders:
     auto_apply: dependents
     build_to: cache
     applies_builders:
-      - gen|model_merger
+      - gen|merger
 
-  model_merger:
+  merger:
     import: 'package:gen/gen.dart'
     builder_factories:
-      - modelMerger
+      - merger
     build_extensions:
       .dart:
         - '*.dart'
