@@ -22,7 +22,7 @@ builders:
     auto_apply: dependents
     build_to: cache
     applies_builders:
-      - gen|modelMerger
+      - gen|model_merger
 
   model_merger:
     import: 'package:gen/gen.dart'
