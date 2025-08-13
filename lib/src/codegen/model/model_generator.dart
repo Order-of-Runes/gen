@@ -22,6 +22,8 @@ class ModelGenerator extends GeneratorForAnnotation<GenModel> {
 
     final className = classElement.name.substring(1);
 
+    print(className);
+
     final metaData = _MetaData(
       generateJson: generateJson,
       fieldRename: fieldRename,
