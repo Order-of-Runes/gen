@@ -120,7 +120,7 @@ String _stringify(Object? data) {
   String get header => '''
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-// ignore_for_file: sort_unnamed_constructors_first
+// ignore_for_file: sort_unnamed_constructors_first, unused_element
 
 ''';
 
