@@ -16,10 +16,10 @@ class Merger extends Builder {
   final String imports = '''
 import 'dart:convert';
 
+import 'package:corekit/corekit.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:resources/resources.dart';
 import 'package:rusty_dart/rusty_dart.dart';
-import 'package:corekit/corekit.dart';
   ''';
 
   // Part Files
