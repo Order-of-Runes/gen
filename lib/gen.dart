@@ -23,12 +23,10 @@ Builder stateGenerator(BuilderOptions options) {
 }
 
 Builder modelGenerator(BuilderOptions options) {
-  print('Model generator');
   return LibraryBuilder(
     ModelGenerator(),
     generatedExtension: '.model.part',
     header: '',
-    allowSyntaxErrors: true,
     formatOutput: (code, version) {
       return formatter(version).format(code);
     },

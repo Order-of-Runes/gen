@@ -10,7 +10,6 @@ import 'package:source_gen/source_gen.dart';
 class ModelGenerator extends GeneratorForAnnotation<GenModel> {
   @override
   String generateForAnnotatedElement(Element element, ConstantReader annotation, BuildStep buildStep) {
-    print('here');
     final generateJson = annotation.read('json').boolValue;
     final fieldRename = processEnum(annotation.read('fieldRename'));
     final generateFieldClass = annotation.read('fields').boolValue;
@@ -22,8 +21,6 @@ class ModelGenerator extends GeneratorForAnnotation<GenModel> {
     final fields = classElement.fields;
 
     final className = classElement.name.substring(1);
-
-    print(className);
 
     final metaData = _MetaData(
       generateJson: generateJson,
