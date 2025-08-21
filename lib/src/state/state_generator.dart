@@ -84,7 +84,7 @@ class StateGenerator extends GeneratorForAnnotation<GenState> {
       }
       
       @override
-      $className setFailure(FailureFoundation failure) {
+      $className setFailure(Failure failure) {
         return $className(
           loading: Loading.none,
           loadingTitle: null,

@@ -14,7 +14,7 @@ dependencies:
   gen_annotation:
     git:
       url: https://github.com/Order-of-Runes/gen_annotation.git
-      ref: main
+      ref: 0.0.2
   json_annotation: ^4.9.0
   pub_semver: ^2.1.5
   source_gen: ^2.0.0
