@@ -4,6 +4,7 @@ import 'dart:convert';
 
 import 'package:analyzer/dart/element/element.dart';
 import 'package:build/build.dart';
+import 'package:gen/src/model/helper/string_helper.dart';
 import 'package:gen_annotation/gen_annotation.dart';
 import 'package:source_gen/source_gen.dart';
 
@@ -206,7 +207,7 @@ class _MetaData {
       copyWithObjArgs.add('$name: $name ?? this.$name,');
 
       if (generateFieldsClass) {
-        fieldClassFields.add('static const String ${name.toConstantCase()} = \'${jsonFields[name] ?? name.toSnakeCase()}\';\n');
+        fieldClassFields.add('static const String ${name.toConstantCase()} = \'${jsonFields[name] ?? convertCase(name, fieldRename)}\';\n');
       }
 
       if (createToString) {
@@ -295,6 +296,4 @@ extension on ElementAnnotation {
 
 extension on String {
   String toConstantCase() => replaceAllMapped(RegExp(r'[A-Z]'), (m) => '_${m[0]}').toUpperCase();
-
-  String toSnakeCase() => toConstantCase().toLowerCase();
 }
