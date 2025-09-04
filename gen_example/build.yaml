@@ -1,0 +1,14 @@
+targets:
+  $default:
+    builders:
+      gen|model_generator:
+        enabled: true
+        generate_for:
+          - lib/*model.dart
+
+      json_serializable:
+        enabled: true
+        generate_for:
+          - lib/model/models.dart
+        options:
+          checked: true
